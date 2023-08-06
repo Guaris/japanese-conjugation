@@ -129,7 +129,7 @@ function touConjugation(affirmative, polite, tense, isKanji) {
     } else if (!affirmative && polite) {
       return [firstLetter + "いませんでした", firstLetter + "わなかったです"];
     } else if (!affirmative && !polite) {
-      return firstLetter + "わなかった";
+      return firstLetter + "わへんかった";
     }
   }
   else if (tense == "te") {
@@ -214,7 +214,7 @@ function suruConjugation(affirmative, polite, tense) {
     } else if (!affirmative && polite) {
       return ["しません", "しないです"];
     } else if (!affirmative && !polite) {
-      return "しない";
+      return "せぇへん";
     }
   }
   else if (tense == "past") {
@@ -528,7 +528,7 @@ let conjugationFunctions = {
       else if (affirmative && !polite && type == "i") {
         return hiraganaAdjective;
       } else if (affirmative && !polite && type == "na") {
-        return hiraganaAdjective + "だ";
+        return hiraganaAdjective + "や";
       }
 
       else if (!affirmative && polite && type == "i") {
@@ -557,13 +557,13 @@ let conjugationFunctions = {
       else if (affirmative && !polite && type == "i") {
         return dropFinalLetter(hiraganaAdjective) + "かった";
       } else if (affirmative && !polite && type == "na") {
-        return hiraganaAdjective + "だった";
+        return hiraganaAdjective + "やった";
       }
 
       else if (!affirmative && polite && type == "i") {
         return [dropFinalLetter(hiraganaAdjective) + "くなかったです", dropFinalLetter(hiraganaAdjective) + "くありませんでした"];
       } else if (!affirmative && polite && type == "na") {
-        return [hiraganaAdjective + "じゃなかったです", hiraganaAdjective + "ではなかったです", hiraganaAdjective + "じゃありませんでした", hiraganaAdjective + "ではありませんでした"];
+        return [hiraganaAdjective + "じゃなかってん", hiraganaAdjective + "ではなかったで", hiraganaAdjective + "やあらへんやった", hiraganaAdjective + "やないやった"];
       }
 
       else if (!affirmative && !polite && type == "i") {
